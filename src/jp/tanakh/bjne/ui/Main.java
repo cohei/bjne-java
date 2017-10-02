@@ -45,35 +45,21 @@ public class Main extends Frame {
 			Menu menu = new Menu("File");
 			{
 				MenuItem item = new MenuItem("Open");
-				item.addActionListener(new ActionListener() {
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						onOpen();
-					}
-				});
+				item.addActionListener(e -> onOpen());
 				menu.add(item);
 			}
 			{
 				MenuItem item = new MenuItem("Exit");
-				item.addActionListener(new ActionListener() {
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						onExit();
-					}
-				});
+				item.addActionListener(e -> onExit());
 				menu.add(item);
 			}
 			menuBar.add(menu);
 		}
+
 		{
 			Menu menu = new Menu("Help");
 			MenuItem item = new MenuItem("About");
-			item.addActionListener(new ActionListener() {
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					onAbout();
-				}
-			});
+			item.addActionListener(e -> onAbout());
 			menu.add(item);
 			menuBar.add(menu);
 		}
